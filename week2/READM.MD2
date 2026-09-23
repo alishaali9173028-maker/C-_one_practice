@@ -1,0 +1,131 @@
+# Discourse Chapter 1
+
+## Week 2 - C# Student Information String Concatenation Practice
+
+### Overview
+
+This practice demonstrates how to create variables, get student information from TextBoxes, combine multiple values using string concatenation, and display the final result using a Label control.
+
+It also demonstrates how to clear the output and close the Windows Form.
+
+---
+
+## 1. Creating Variables
+
+In this step, variables are created to store the student's information.
+
+* `name` stores the student's name.
+* `studentId` stores the student's ID.
+* `departemen` stores the student's department.
+* `semester` stores the student's semester.
+* `full_deta` stores all the student information after combining the values.
+
+The variables are declared in C# as follows:
+
+```csharp
+string name, studentId, departemen, semester, full_deta;
+```
+![Creating Variables](screenshoot/create_variables.PNG)
+
+---
+
+## 2. Getting Student Information
+
+The user enters the student information into four TextBox controls.
+
+The `.Text` property is used to retrieve the values entered by the user.
+
+```csharp
+name = textname.Text;
+studentId = textstudentId.Text;
+departemen = textdepartement.Text;
+semester = textsemester.Text;
+```
+
+Each value from the TextBox is stored in its corresponding variable.
+
+For example:
+
+```text
+Name: Aisha
+Student ID: c1230546
+Department: Computer Science
+Semester: 4
+```
+
+---
+
+## 3. Concatenating the Student Information
+
+In this step, all the student information is combined using the `+` operator.
+
+The values are joined together and stored in the `full_deta` variable.
+
+```csharp
+full_deta = name + " , " + studentId + " , " + departemen + " , " + semester;
+```
+
+For example, if the user enters:
+
+```text
+Aisha
+C1230546
+Computer Science
+4
+```
+
+The final result will be:
+
+
+Aisha C1230546 Computer Science 4
+```
+
+The combined information is stored in the `full_deta` variable.
+![process concatination](screenshoot/process_concatination.PNG)
+
+---
+
+## 4. Displaying the Result
+
+After the student information is combined, the result is displayed using the `lbloutput` Label control.
+
+The `.Text` property is used to display the value stored in `full_deta`.
+
+```csharp
+lbloutput.Text = full_deta;
+```
+
+The Label will display the complete student information.
+
+---![output using label](screenshoot/output_using_label.PNG)
+
+
+## 5. Clear Button
+
+The Clear button is used to clear the output displayed in the Label.
+
+```csharp
+lbloutput.Text = " ";
+```
+
+This removes the displayed student information from the Label.
+---![close](screenshoot/close.PNG)
+
+---
+
+## 6. Exit Button
+
+The Exit button closes the current Windows Form.
+
+```csharp
+this.Close();
+```
+
+The `Close()` method is used to close the form.
+---![clearning lable](screenshoot/clearning_lable.PNG)
+
+---
+
+## Conclusion
+
+This practice demonstrates how to use variables, TextBox controls, Label controls, string concatenation using the `+` operator, the `.Text` property, the `.Close()` method, and Windows Forms event handlers in a C# application.
